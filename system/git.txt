@@ -1,0 +1,66 @@
+Git is a tool for managing versions and collaborating on software.
+
+Commands and pathways that I use often:
+
+// set up your password
+// the first time you try to clone a restricted repo, it will ask for your password. you have to input your SSH KEY instead of your actual user account password for it to work.
+
+git clone 
+git pull
+
+// check out all submodules
+git clone --recurse-submodules https://github.com/hydra-synth/hydra.git
+
+// check out submodules to existing repo
+git submodule update --init
+
+// git pull all submodules
+git submodule foreach git pull origin main  
+
+// set up your config
+git config --global user.name "Nicholas Masso"
+git config --global user.email "nicholas.masso@sri.com"
+
+// list all branches
+git branch -la
+
+// make a new branch and track it on remote
+git status
+git checkout -b newbranch
+git push --set-upstream origin newbranch
+
+// checkout a remote branch locally
+git checkout -b localbranchname --track origin/remotebranchname
+
+// reset
+git reset --hard HEAD
+git fetch origin
+git reset --hard origin/synfini-staging
+
+// revert a single file to the current commit
+git restore [path]
+
+// find current commit hash
+git rev-parse HEAD
+
+//revert single file to a previous commit
+git checkout 0a068a1d -- MDC_Sim/Content/MDC_Models/MasterManipulatorActor1.uasset 
+
+//merge
+git fetch origin
+git checkout 'destination_branch'
+git merge --no-ff 'incoming_branch'
+
+// if u wanna go back
+git merge --abort
+
+// delete a branch
+// move off the branch first
+git checkout branchyouwanttokeep
+git branch --delete badbranch
+
+// add a gitignore to get rid of a currently tracked file
+(create the gitignore)
+git rm -rf --cached .
+git add . 
+git commit -m 'fixed gitignore'

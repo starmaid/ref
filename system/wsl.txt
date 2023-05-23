@@ -1,0 +1,7 @@
+admin powershell:
+
+wsl --set-version Ubuntu 1
+wsl --list --all --verbose
+wsl --terminate Ubuntu
+
+wsl update

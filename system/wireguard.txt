@@ -1,0 +1,13 @@
+
+
+
+logconn.sh
+```
+#!/bin/bash
+
+FILE="/home/pi/connections.log"
+
+date >> $FILE
+sudo wg show wg0 >> $FILE
+echo "" >> $FILE
+```
