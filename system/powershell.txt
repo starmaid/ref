@@ -2,3 +2,6 @@ Get-ChildItem env:
 $env:PYTHONPATH
 
 C:\Users\e33965\Documents\WindowsPowerShell
+
+# history file
+%APPDATA%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
