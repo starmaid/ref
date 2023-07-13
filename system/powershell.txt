@@ -5,3 +5,6 @@ C:\Users\e33965\Documents\WindowsPowerShell
 
 # history file
 %APPDATA%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+
+# get size of each folder in directory
+gci .\ | foreach {Write-Host $_.FullName ; "{0:N2} GB" -f ((gci -force $_ –Recurse | measure Length -s).sum / 1Gb)}
