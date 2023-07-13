@@ -11,6 +11,12 @@ git pull
 // check out all submodules
 git clone --recurse-submodules https://github.com/hydra-synth/hydra.git
 
+// shallow clone for large repos
+git clone -–depth [depth] [remote-url]
+
+// only clone a specific branch for large repos
+git clone [remote-url] --branch [name] --single-branch
+
 // check out submodules to existing repo
 git submodule update --init
 
