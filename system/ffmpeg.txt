@@ -6,3 +6,11 @@ vid2gif() { ffmpeg -i "$1" -vf "fps=10,split[s0][s1];[s0]palettegen[p];[s1][p]pa
 
 gif2vid() { ffmpeg -i "$1" -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" "$2"; }
 ```
+
+convert every mkv in a dir
+```
+#!/bin/bash
+for filename in ./*.mkv; do
+    ffmpeg -i "$filename" "$filename".mp4
+done
+```
