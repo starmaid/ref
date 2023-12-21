@@ -1,0 +1,1 @@
+yt-dlp -x --audio-format mp3 --audio-quality 128K -o filename.mp3 https://www.youtube.com/watch?v=H3DG-Y5Cy1s
