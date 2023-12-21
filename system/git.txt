@@ -30,6 +30,9 @@ git config --global user.email "nicholas.masso@sri.com"
 // list all branches
 git branch -la
 
+// visualize branch history
+git log --graph --decorate --oneline
+
 // make a new branch and track it on remote
 git status
 git checkout -b newbranch
@@ -41,6 +44,8 @@ git checkout -b localbranchname --track origin/remotebranchname
 // reset
 git reset --hard HEAD
 git fetch origin
+// remove untracked files (adding x to params deletes ignored files)
+git clean -fd
 git reset --hard origin/synfini-staging
 
 // revert a single file to the current commit
@@ -49,10 +54,10 @@ git restore [path]
 // find current commit hash
 git rev-parse HEAD
 
-//revert single file to a previous commit
+// revert single file to a previous commit
 git checkout 0a068a1d -- MDC_Sim/Content/MDC_Models/MasterManipulatorActor1.uasset 
 
-//merge
+// merge
 git fetch origin
 git checkout 'destination_branch'
 git merge --no-ff 'incoming_branch'
