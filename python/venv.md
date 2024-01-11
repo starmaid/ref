@@ -11,5 +11,7 @@ pip install foo
 
 pip freeze > requirements.txt
 
+pip install -r requirements.txt
+
 deactivate
 ```
