@@ -1,0 +1,40 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install matchbox-keyboard
+
+cd Downloads
+#wget http://en.kedei.net/raspberry/v6_1/LCD_show_v6_1_3.tar.gz
+# it got moved
+wget http://kedei.net/IMG/v6_1/LCD_show_v6_1_3.tar.gz
+
+
+tar -xvzf LCD_show_v6_1_3.tar.gz
+cd LCD_show_v6_1_3
+
+sudo ./LCD35_v
+
+# after reboot you have to do more things
+
+sudo raspi-config
+# advanced options
+# GL Driver
+# switch to fake KMS
+
+sudo nano /boot/config.txt
+#Search for, uncomment and/or change the following lines (in my config file it was lines 28 & 29, and 48)
+hdmi_group=2
+hdmi_mode=35
+dtparam=spi=off
+
+(Note that rather strangely you need to disable SPI to make the SPI display work.)
+
+Finally, add or change the following lines at the end of the file.
+hdmi_force_hotplug=1
+gpu_mem=32
+start_x=0
+enable_uart=1
+dtoverlay=w1-gpio
+
+# one more reboot
+sudo reboot
+

@@ -1,0 +1,5 @@
+### Get .local hostname resolution on linux
+
+sudo apt install avahi-daemon avahi-discover avahi-utils libnss-mdns mdns-scan
+sudo systemctl enable avahi-daemon
+sudo systemctl start avahi-daemon

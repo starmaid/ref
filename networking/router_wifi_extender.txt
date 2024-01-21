@@ -1,0 +1,15 @@
+# Setting up wifi range extending
+
+WDS is where you turn wireless into wired+extender. Only secondary router needs to be put in WDS mode. Reduces bandwidth
+
+[WDS - Old TP link green UI](https://www.tp-link.com/us/support/faq/227/)
+
+[WDS - TP Link new UI](https://community.tp-link.com/us/home/kb/detail/396)
+
+AP Mode: connect as a wired client, broadcast a network with the same SSID and password. Range Extender.
+
+[AP Mode - TPLink - the thing I actually used](https://www.tp-link.com/us/support/faq/1384/)
+
+[ASUS AP Mode](https://www.asus.com/us/support/FAQ/1051175)
+
+I tried setting the IP of the secondary router to 192.168.0.2 but it got fucked up somehow. I set it to .3 and that fixed it.

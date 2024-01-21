@@ -1,0 +1,68 @@
+Steps for setting up a new version of the os
+Written by Nick Masso
+11/3/2019
+
+Download the latest version of raspbian (not raspbian full, not raspbian lite. just plain raspbian)
+Flash the onto the medium you are using
+
+download the desktop files from this folder onto a flash drive
+
+insert the flashed media into the pi
+connect the pi to a display and keyboard
+connect the pi to the internet with an ethernet cord
+power on the pi
+
+hit cancel on the window that wants you to set a region etc
+
+open the terminal
+
+verify internet connectivity
+$ ping google.com
+
+connect the flash drive
+transfer the contents of the flash drive to /home/pi/Desktop
+(you can drag and drop, or command line)
+sudo cp -r /media/pi/FLASH_DRIVE/. ~/Desktop/
+
+$ cd /home/pi/Desktop
+$ chmod +x ./run.sh
+$ sudo ./run.sh
+
+roughly 15 minutes into the scripy, you will have to confirm an XRDP screen.
+Use the arrow keys to select 'yes' and press enter to continue.
+
+wait a while. get a cup of tea.
+
+after the script is done running and you get your command prompt back, 
+
+$ sudo nano /etc/xrdp/xrdp.ini
+Scroll down and edit the allow_channels setting to say allow_channels=false.
+just below that, change the bitmap cache value to false also. update bitmap_cache=false
+ctrl+x to exit, press y to confirm
+
+then execute
+$ history -r
+$ sudo poweroff
+
+
+Now move back over to your LINUX machine.
+take the SD card out of your pi
+connect it to your computer
+
+$ lsblk
+make sure that your SD card has not been mounted (mount point will be blank)
+if it was mounted, unmount all mounted partitions.
+$ umount /dev/sdc1
+$ umount /dev/sdc2
+(replace sdcX with whatever the volume was assigned)
+
+now copy the SD card into a compressed disk image file
+
+you are copying the disk, not a partition on the disk, so 'sdc' will not be followed by a number.
+replace /path/to/engr16x_v5_4.img.gz with wherever you want the output file to be saved.
+
+$ sudo dd if=/dev/sdc conv=sync,noerror status=progress bs=64K | gzip -c > /path/to/engr16x_v5_4.img.gz
+or if you have pv (pipe viewer) installed and want a fun progress bar
+$ sudo dd if=/dev/sdc conv=sync,noerror bs=64K | pv -s 7400M | gzip -c > /path/to/engr16x_v5_4.img.gz
+
+that compressed file now has your image in it. proceed to the "setting up the eOS" document on setup day.
