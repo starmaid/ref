@@ -41,6 +41,12 @@ git push --set-upstream origin newbranch
 // checkout a remote branch locally
 git checkout -b localbranchname --track origin/remotebranchname
 
+// checkout a tag
+git fetch --all --tags --prune
+git tag --list
+git checkout tags/<tag> -b <branch>
+// you need to provide a new branch to work on because tags arent real.
+
 // reset
 git reset --hard HEAD
 git fetch origin
