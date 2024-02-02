@@ -11,13 +11,15 @@ Acrylic Frosted / Cherry Screw-in / Polycarbonate plate
 - Add case foam to cart（Put it between the PCB and the case）: No,Thanks!
 - Add PCB foam to cart（Put it between the PCB and the Plate）: No,Thanks! 
 
-Pls do not delete it! (70 Switches Option) × 1
-cherry brown $23.50
+Keychron G124 Kailh Box Jellyfish Y (Linear) $59.99
 
-Cherry Profile PBT Simple White Dye-Subbed Keycaps Set × 1
-Base $39.90
+Cherry Profile PBT Simple White Dye-Subbed Keycaps Set $39.90
 
 Runs QMK firmware. [Configure](https://config.qmk.fm/#/dztech/dz65rgb/v3/LAYOUT_65_ansi) and hold the escape key to enter flash mode. Use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)
+
+Greased the stabilizers with
+
+SuperLube Silicone Dielectric Grease 30oz $26.99
 
 ## Secondary
 
@@ -33,7 +35,19 @@ Runs [Vial firmware](https://vial.rocks/)
 
 DIERYA DK63N 60% Wireless Wired Mechanical Gaming Keyboard, RGB Backlit Bluetooth Keyboard w/Arrow Keys, 63 Keys $43.99 
 - Otemu Brown switches
+- Aluminum plate, plastic case: suprisingly solid and weighty.
+- The battery in the case feels like a brass insert
 
-Has its own firmware and drivers. Might be able to reprogram if I find what chip is inside.
+Has its own firmware and drivers.
 
 141 Keys Botanical Keycaps Cherry Profile Dye Sub PBT $49.99
+
+Greased spacebar and enter key with aforementioned superlube
+
+The switches are soldered, and the stabilizer plate makes it impossible to remove the stabilizers. Really no improvement path.
+
+## Not installed
+
+Cherry MX Brown Switches (x70) $23.50
+
+Glorious PBT Nebula Key Caps 114 Keys $49.99
