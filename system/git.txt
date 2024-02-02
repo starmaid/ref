@@ -75,3 +75,12 @@ git branch --delete badbranch
 git rm -rf --cached .
 git add . 
 git commit -m 'fixed gitignore'
+
+//If you just want to track changes, first make an empty repository in GitLab (or whatever else you may be using) and clone it to your computer. Then add the GitHub project as the "upstream" remote with:
+
+git remote add upstream https://github.com/user/repo
+git pull upstream master
+git push origin master
+
+// Print the url of the git remote
+git config --get remote.origin.url
