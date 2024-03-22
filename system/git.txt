@@ -52,6 +52,7 @@ git reset --hard HEAD
 git fetch origin
 // remove untracked files (adding x to params deletes ignored files)
 git clean -fd
+git clean -fdx
 git reset --hard origin/synfini-staging
 
 // revert a single file to the current commit

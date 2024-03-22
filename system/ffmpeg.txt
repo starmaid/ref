@@ -23,3 +23,18 @@ for filename in ./*.gif; do
     ffmpeg -i "$filename" -filter_complex "fps=15,scale=iw/2:ih/2,split[s0][s1];[s0]palettegen=16[p];[s1][p]paletteuse=dither=floyd_steinberg" "./sm/$filename"
 done
 ```
+
+
+idk
+```
+#!/bin/bash
+for filename in ./*.gif; do
+    ffmpeg -i "$filename" -filter_complex "fps=15,scale=iw/2:ih/2,split[s0][s1];[s0]palettegen=16[p];[s1][p]paletteuse=dither=floyd_steinberg" "./sm/$filename"
+done
+
+
+ffmpeg -i joints_taurus_arena.gif -vf "fps=15,split[s0][s1];[s0]palettegen=64[p];[s1][p]paletteuse;[s1]scale=iw/2:ih/2" "./sm/joints_taurus_arena.gif"
+
+ffmpeg -i joints_taurus_arena.gif -filter_complex "fps=15,scale=iw/2:ih/2,split[s0][s1];[s0]palettegen=16[p];[s1][p]paletteuse=dither=floyd_steinberg" "./sm/joints_taurus_arena.gif"
+
+```
