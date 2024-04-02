@@ -1,0 +1,20 @@
+# Tar command
+
+'c'reate archive
+'z' use gzip compression
+'v' verbose
+'f' specify filename
+
+tar -zcvf export.tar.gz ./export/
+
+e'x'tract
+'v' verbose
+'f' specify filename
+
+tar -xvf export.tar.gz
+
+excludes have to come before the command
+
+tar --exclude='./folder' --exclude='./upload/folder2' -zcvf /backup/filename.tgz ./
+
+fasttar() { tar --exclude='$2/.git' -zcvf $1 $2 }
