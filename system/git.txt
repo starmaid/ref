@@ -41,6 +41,11 @@ git push --set-upstream origin newbranch
 // checkout a remote branch locally
 git checkout -b localbranchname --track origin/remotebranchname
 
+// make a tag
+// just always use annotated tags please
+git tag -a v1.0.0 -m "first version"
+git push origin --tags
+
 // checkout a tag
 git fetch --all --tags --prune
 git tag --list
