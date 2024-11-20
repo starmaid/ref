@@ -1,0 +1,34 @@
+
+
+Steps:
+
+0. Disable secure boot from windows
+1. install nix on surface. use external mouse and keeb
+	a. use systemd-boot instead of grub, when asked.
+2. Load nixos-hardware and get the linux-surface files
+	a. <nixos-hardware/microsoft/surface/common>
+	b. figure out if you need to do anything different...then maybe commit something to add support for the 8 specifically?
+3. Get surface-libwacom running?
+
+
+nixos-hardware
+https://github.com/NixOS/nixos-hardware/tree/master?tab=readme-ov-file#setup
+
+nixos surface tools
+https://github.com/NixOS/nixos-hardware/blob/master/microsoft/surface/README.md
+
+
+linux-surface notes on nix
+https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup#Post-Installation
+
+linux-surface install steps
+https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup
+
+SP8 quirks page
+https://github.com/linux-surface/linux-surface/wiki/Surface-Pro-8
+
+nixos bootloaders - (how to be systemd-boot?)
+https://nixos.wiki/wiki/Bootloader
+
+the subreddit
+https://www.reddit.com/r/SurfaceLinux/

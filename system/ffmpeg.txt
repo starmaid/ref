@@ -45,4 +45,9 @@ convert every canon MXF in a dir
 for filename in ./*.MXF; do 
 	ffmpeg -i "$filename" -pix_fmt yuv420p -c:v libx264 -c:a aac -b:a 384k -sn "$filename".mp4
 done
+
+fix video
+
+```
+ffmpeg -err_detect ignore_err -i video.mkv -c copy video_fixed.mkv
 ```
