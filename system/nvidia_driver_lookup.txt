@@ -1,0 +1,26 @@
+
+
+uri = ('https://gfwsl.geforce.com/services_toolkit/services/com/nvidia/services/AjaxDriverService.php' +
+	'?func=DriverManualLookup' +
+	'&psid=123' + # Geforce RTX 30 Series Notebook
+	'&pfid=976' +  # RTX 3080 Ti
+	'&osID=57' + # Windows 10 64bit
+	'&languageCode=1033' + # en-US; seems to be "Windows Locale ID"[1] in decimal
+	'&isWHQL=1' + # WHQL certified
+	'&dch=1' + # DCH drivers (the new standard)
+	'&sort1=0' + # sort: most recent first(?)
+	'&numberOfResults=100' # single, most recent result is enough
+)
+
+
+https://www.nvidia.com/Download/processFind.aspx?psid=123&pfid=976&osid=57&lid=1&whql=&lang=en-us&ctk=0&qnfslb=00&dtcid=1
+
+https://github.com/lord-carlos/nvidia-update/blob/master/README.md
+
+go to the driver lookup page, inspect, enter your card info, search for your drivers, look at the request, grab the psid and pfid, enter into this query
+
+max might be 50, but that might have also been the most the card had.
+
+result is a json, load in npp
+
+replace %20 with space to make easier to read

@@ -23,11 +23,18 @@ conda create --prefix=songstructure python=3.9
 # have to be outside the folder to point to it
 conda activate ./songstructure
 
+# create from yml file
+conda env create -f environment.yml
+
 conda install matplotlib
 
 conda install -c conda-forge cudatoolkit=11.8.0
 
+conda env export > env.yml
+
 conda env export --from-history > env.yml
+
+conda env update --file local.yml --prune
 
 conda deactivate
 

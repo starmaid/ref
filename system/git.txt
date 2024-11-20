@@ -74,6 +74,10 @@ git fetch origin
 git checkout 'destination_branch'
 git merge --no-ff 'incoming_branch'
 
+// pick ours or theirs for conflicted files
+git checkout --theirs -- path/to/conflicted-file.txt
+git checkout --ours -- path/to/conflicted-file.txt
+
 // if u wanna go back
 git merge --abort
 

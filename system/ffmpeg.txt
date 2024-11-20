@@ -38,3 +38,11 @@ ffmpeg -i joints_taurus_arena.gif -vf "fps=15,split[s0][s1];[s0]palettegen=64[p]
 ffmpeg -i joints_taurus_arena.gif -filter_complex "fps=15,scale=iw/2:ih/2,split[s0][s1];[s0]palettegen=16[p];[s1][p]paletteuse=dither=floyd_steinberg" "./sm/joints_taurus_arena.gif"
 
 ```
+
+convert every canon MXF in a dir
+```
+#!/bin/bash
+for filename in ./*.MXF; do 
+	ffmpeg -i "$filename" -pix_fmt yuv420p -c:v libx264 -c:a aac -b:a 384k -sn "$filename".mp4
+done
+```
