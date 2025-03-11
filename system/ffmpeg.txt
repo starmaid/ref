@@ -51,3 +51,9 @@ fix video
 ```
 ffmpeg -err_detect ignore_err -i video.mkv -c copy video_fixed.mkv
 ```
+
+
+trim
+```
+ffmpeg -ss 00:01:00 -to 00:02:00 -i input.mp4 -c copy output.mp4
+```
