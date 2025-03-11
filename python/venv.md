@@ -3,10 +3,10 @@
 Python Virtual Environments
 
 ```
-py -m venv <name>
+py -m venv ./venv
 
 or to create one in current dir named the folder youre in
-py -m venv . 
+py -m venv .
 
 .\venv\Scripts\Activate.*
 
