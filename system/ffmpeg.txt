@@ -53,11 +53,21 @@ ffmpeg -err_detect ignore_err -i video.mkv -c copy video_fixed.mkv
 ```
 
 
+
+open webcam and stream to two RTSP servers
+
+```
+ffmpeg -hwaccel cuda -hwaccel_output_format cuda -f dshow -video_size 1280x720 -rtbufsize 20M -framerate 30 -i video="Integrated Webcam" -c:v h264_nvenc -preset fast -b:v 600k -f tee -map 0:v "[f=rtsp:rtsp_transport=tcp]rtsp://localhost:$RTSP_PORT/$MTX_PATH|[f=rtsp:rtsp_transport=tcp]rtsp://localhost:5554/$MTX_PATH"
+```
+
+trim video
+
+ffmpeg -i input.mp4 -ss 00:05:20 -t 00:10:00 -c:v copy -c:a copy output1.mp4
+
 trim
 ```
 ffmpeg -ss 00:01:00 -to 00:02:00 -i input.mp4 -c copy output.mp4
 ```
-
 
 image sequence
 ```
@@ -78,4 +88,8 @@ Use -vf "transpose=2,transpose=2" for 180 degrees.
 
 ```
 ffmpeg -i 2_stuggle.mp4 -vf "transpose=1" 2_stuggle_r.mp4
+```
+
+```
+for i in *.flac; do ffmpeg -i "$i" "${i%.*}.mp3"; done
 ```
