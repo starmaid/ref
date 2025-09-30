@@ -13,7 +13,7 @@ Acrylic Frosted / Cherry Screw-in / Polycarbonate plate
 
 Keychron G124 Kailh Box Jellyfish Y (Linear) $59.99
 
-Cherry Profile PBT Simple White Dye-Subbed Keycaps Set $39.90
+GEKUCAP Black Japanese Keycaps 129 Keys PBT Dye Sublimation $23.99
 
 Runs QMK firmware. [Configure](https://config.qmk.fm/#/dztech/dz65rgb/v3/LAYOUT_65_ansi) and hold the escape key to enter flash mode. Use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)
 
@@ -21,24 +21,39 @@ Greased the stabilizers with
 
 SuperLube Silicone Dielectric Grease 30oz $26.99
 
-## Secondary
+## Ergo Build
 
 BeeKeeb Piantor Keyboard (Cantor Layout with Hotswap) 42 Keys / 36 Keys Diodeless RP2040 Low Profile Split Keyboard DIY Kit $90.00
 - Controller: WeAct RP2040 (Black - USB-C)
 - Key Switch: Choc Blue (Linear 20gf)
 - Keycap: PBT Choc Spacing White
-- Plate / Case: I don't need a case
+- Plate / Case: 3D Printed
 
 Runs [Vial firmware](https://vial.rocks/)
 
-## Garbage
+## Azu's 75%
+
+Akko 5075 RGB, 82 keys + rotary encoder with pushbutton. $100
+- Unknown keycap set. 
+
+Keychron G62 Gateron CJ Dark Blue (Linear 50gf) $54.99
+
+Runs QMK
+
+## Micro Center Ortholinear
+
+Inland MK47 Ortholinear Keyboard $34.99
+- Huano Red (Linear 45gf)
+- Stock keycaps
+
+Runs QMK
+
+## My first keyboard
 
 DIERYA DK63N 60% Wireless Wired Mechanical Gaming Keyboard, RGB Backlit Bluetooth Keyboard w/Arrow Keys, 63 Keys $43.99 
-- Otemu Brown switches
+- Otemu Brown switches (Tactile 50gf)
 - Aluminum plate, plastic case: suprisingly solid and weighty.
 - The battery in the case feels like a brass insert
-
-Has its own firmware and drivers.
 
 141 Keys Botanical Keycaps Cherry Profile Dye Sub PBT $49.99
 
@@ -46,8 +61,12 @@ Greased spacebar and enter key with aforementioned superlube
 
 The switches are soldered, and the stabilizer plate makes it impossible to remove the stabilizers. Really no improvement path.
 
+Has its own firmware and drivers, haven't tried reflashing.
+
 ## Not installed
 
 Cherry MX Brown Switches (x70) $23.50
 
 Glorious PBT Nebula Key Caps 114 Keys $49.99
+
+Cherry Profile PBT Simple White Dye-Subbed Keycaps Set $39.90
