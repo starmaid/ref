@@ -93,3 +93,11 @@ ffmpeg -i 2_stuggle.mp4 -vf "transpose=1" 2_stuggle_r.mp4
 ```
 for i in *.flac; do ffmpeg -i "$i" "${i%.*}.mp3"; done
 ```
+
+
+```
+ffmpeg -i video.mp4 -t 00:00:06 -vf "scale=iw/4:ih/4,fps=20,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 ac.gif
+
+
+ffmpeg -i 20250401_020410.mp4 -ss 00:00:00 -t 00:01:43 -filter_complex "[0:v]crop=1000:1200:0:300[v];[0:a]volume=4[a]" -map "[v]" -map "[a]" armored_core_haptic_2.mp4
+```
