@@ -1,0 +1,28 @@
+use WinDirStat to find and delete large files.
+
+Disable hibernate with
+
+admin cmd prompt
+
+powercfg /h off
+
+
+disable pagefile
+system properties -> advanced -> performance -> advanced -> virtual memory
+
+remove restore points 
+system properties -> system protection
+
+delete the journal
+
+fsutil usn deletejournal /d c:
+
+fsutil usn queryjournal c:
+
+make the new one contiguous 
+
+"C:\Users\star-tower\_programs\SysinternalsSuite\Contig.exe" -v -s C:\$Extend
+
+fsutil usn createjournal m=786432 a=1 D:
+
+reboot
