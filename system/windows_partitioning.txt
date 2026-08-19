@@ -13,6 +13,8 @@ system properties -> advanced -> performance -> advanced -> virtual memory
 remove restore points 
 system properties -> system protection
 
+delete restore points as well
+
 delete the journal
 
 fsutil usn deletejournal /d c:
@@ -24,5 +26,11 @@ make the new one contiguous
 "C:\Users\star-tower\_programs\SysinternalsSuite\Contig.exe" -v -s C:\$Extend
 
 fsutil usn createjournal m=786432 a=1 D:
+
+cleanmgr
+
+clean it alllll
+
+defrag C: /A /U /V
 
 reboot
