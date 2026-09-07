@@ -1,0 +1,3 @@
+in the command line, teh configuration is at
+
+/mnt/data/supervisor/homeassistant/configuration.yaml
