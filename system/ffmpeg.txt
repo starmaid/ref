@@ -111,3 +111,8 @@ ffmpeg -i raw_trim.mp4 -vf "fps=10,split[s0][s1];[s0]palettegen[p];[s1][p]palett
 
 ffmpeg -i thumb.gif -filter_complex "fps=15,scale=iw/2:ih/2,split[s0][s1];[s0]palettegen=16[p];[s1][p]paletteuse=dither=floyd_steinberg" thumb_sm.gif
 ```
+
+convert from webm with weird resolution to mp4
+```
+ffmpeg -i in.webm -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -c:a aac out.mp4
+```
